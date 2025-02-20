@@ -12,9 +12,8 @@
       ]
     },
     "network_code": {
-      "description": "Unique network name for the installation, maximum of eight alphanumeric characters with no special characters (e.g., underscores, period, and dash).",
-      "type": "string",
-      "maxLength": 8
+      "description": "Unique FDSN network code for the installation, following FDSN Source Identifier specification",
+      "$ref": "#/$defs/fdsncode"
     },
     "location": {
       "description": "Name of the geographic location of the installation.",
@@ -149,7 +148,12 @@
     "dasid": {
       "type": "string",
       "maxLength": 8,
-      "pattern": "^[a-zA-Z0-9]$"
+      "pattern": "^[a-zA-Z0-9]{0,8}$"
+    },
+    "fdsncode": {
+      "type": "string",
+      "maxLength": 8,
+      "pattern": "^[A-Z0-9]{0,8}$"
     },
     "fiber": {
       "type": "object",
