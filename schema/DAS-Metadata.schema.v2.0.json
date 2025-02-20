@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://www.fdsn.org/schemas/DAS-Metadata-FDSN/1.0",
+  "$id": "https://www.fdsn.org/schemas/DAS-Metadata-FDSN/2.0",
   "title": "DAS Metadata",
   "description": "Distributed Acoustic Sensing (DAS) Metadata",
   "type": "object",
@@ -8,7 +8,7 @@
     "version": {
       "description": "Version of the metadata schema that this document conforms to.",
       "enum": [
-        "1.0"
+        "2.0"
       ]
     },
     "network_code": {
@@ -149,7 +149,7 @@
     "dasid": {
       "type": "string",
       "maxLength": 8,
-      "pattern": "^[A-Z0-9]{0,7}$"
+      "pattern": "^[a-zA-Z0-9]$"
     },
     "fiber": {
       "type": "object",
