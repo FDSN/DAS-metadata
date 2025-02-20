@@ -1,10 +1,16 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://example.com/das.schema.json",
-  "title": "Overview",
-  "description": "Overview Metadata",
+  "$id": "https://www.fdsn.org/schemas/DAS-Metadata-FDSN/1.0",
+  "title": "DAS Metadata",
+  "description": "Distributed Acoustic Sensing (DAS) Metadata",
   "type": "object",
   "properties": {
+    "version": {
+      "description": "Version of the metadata schema that this document conforms to.",
+      "enum": [
+        "1.0"
+      ]
+    },
     "network_code": {
       "description": "Unique network name for the installation, maximum of eight alphanumeric characters with no special characters (e.g., underscores, period, and dash).",
       "type": "string",
@@ -77,7 +83,9 @@
       "title": "Interrogators",
       "description": "Interrogators",
       "type": "array",
-      "items": { "$ref": "#/$defs/interrogator" },
+      "items": {
+        "$ref": "#/$defs/interrogator"
+      },
       "minItems": 1,
       "uniqueItems": true
     },
@@ -85,32 +93,57 @@
       "title": "Cables",
       "description": "Cables",
       "type": "array",
-      "items": { "$ref": "#/$defs/cable" },
+      "items": {
+        "$ref": "#/$defs/cable"
+      },
       "minItems": 1,
       "uniqueItems": true
     }
   },
-  "required": [ "network_code", "location", "country", "principal_investigator_name", "principal_investigator_email",
-    "principal_investigator_address", "point_of_contact", "point_of_contact_email", "point_of_contact_address",
-    "start_date", "end_date" ],
+  "required": [
+    "version",
+    "network_code",
+    "location",
+    "country",
+    "principal_investigator_name",
+    "principal_investigator_email",
+    "principal_investigator_address",
+    "point_of_contact",
+    "point_of_contact_email",
+    "point_of_contact_address",
+    "start_date",
+    "end_date"
+  ],
   "$defs": {
     "mandatorydatetime": {
       "type": "string",
       "oneOf": [
-        {"format": "date-time"},
-        {"format": "date"}
+        {
+          "format": "date-time"
+        },
+        {
+          "format": "date"
+        }
       ]
     },
     "optionaldatetime": {
       "oneOf": [
-        {"type": "null"},
-        {"$ref": "#/$defs/mandatorydatetime"}
+        {
+          "type": "null"
+        },
+        {
+          "$ref": "#/$defs/mandatorydatetime"
+        }
       ]
     },
     "optionalnumber": {
       "oneOf": [
-        {"type": "null"},
-        {"type": "number"}
+        {
+          "type": "null"
+        },
+        {
+          "type": "number"
+        }
       ]
     },
     "dasid": {
@@ -263,7 +296,9 @@
           "title": "Fibers",
           "description": "Fibers",
           "type": "array",
-          "items": { "$ref": "#/$defs/fiber" },
+          "items": {
+            "$ref": "#/$defs/fiber"
+          },
           "minItems": 1,
           "uniqueItems": true
         }
@@ -319,9 +354,19 @@
     },
     "channel_group": {
       "type": "object",
-      "required": [ "channel_group_id", "interrogator_id", "acquisition_id", "cable_id", "fiber_id",
-        "coordinate_generation_date", "coordinate_system", "reference_frame", "distance_along_fiber_unit",
-        "x_coordinate_unit", "y_coordinate_unit" ],
+      "required": [
+        "channel_group_id",
+        "interrogator_id",
+        "acquisition_id",
+        "cable_id",
+        "fiber_id",
+        "coordinate_generation_date",
+        "coordinate_system",
+        "reference_frame",
+        "distance_along_fiber_unit",
+        "x_coordinate_unit",
+        "y_coordinate_unit"
+      ],
       "properties": {
         "channel_group_id": {
           "description": "Unique identifier of the channel group. Identifier should have the maximum of eight alphanumeric characters with no special characters (e.g., underscores, period, and dash).",
@@ -349,7 +394,11 @@
         },
         "coordinate_system": {
           "description": "Coordinate system used in channel location. Select geographic for coordinates in latitude and longitude. Universal Transverse Mercator (UTM) is the preferred projected coordinate system.",
-          "enum": [ "geographic", "UTM", "local" ]
+          "enum": [
+            "geographic",
+            "UTM",
+            "local"
+          ]
         },
         "reference_frame": {
           "description": "Geodetic datum and/or grid zone number in UTM.",
@@ -455,7 +504,9 @@
         },
         "channels": {
           "type": "array",
-          "items": { "$ref": "#/$defs/channel" }
+          "items": {
+            "$ref": "#/$defs/channel"
+          }
         }
       }
     },
@@ -512,7 +563,12 @@
         },
         "unit_of_measure": {
           "description": "Unit of measure of archived data set. This may be the same unit as the Interrogator unit measure if the data are raw.",
-          "enum": ["count", "strain", "strain-rate", "velocity"]
+          "enum": [
+            "count",
+            "strain",
+            "strain-rate",
+            "velocity"
+          ]
         },
         "number_of_channels": {
           "description": "The total number of sampling points along the fiber as output from the interrogator, referred to as NumberOfLoci in PRODML.",
@@ -552,13 +608,19 @@
         },
         "channel_groups": {
           "type": "array",
-          "items": { "$ref": "#/$defs/channel_group" }
+          "items": {
+            "$ref": "#/$defs/channel_group"
+          }
         }
       }
     },
     "interrogator": {
       "type": "object",
-      "required": [ "interrogator_id", "manufacturer", "model" ],
+      "required": [
+        "interrogator_id",
+        "manufacturer",
+        "model"
+      ],
       "properties": {
         "interrogator_id": {
           "description": "Unique identifier of the interrogator unit used in the experiment, assigned by data provider. Identifier should have the maximum of eight alphanumeric characters with no special characters (e.g., underscores, period, and dash).",
@@ -586,7 +648,9 @@
         },
         "acquisitions": {
           "type": "array",
-          "items": { "$ref": "#/$defs/acquisition" }
+          "items": {
+            "$ref": "#/$defs/acquisition"
+          }
         }
       }
     }
