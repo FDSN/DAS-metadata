@@ -149,7 +149,7 @@
     "dasid": {
       "type": "string",
       "maxLength": 8,
-      "pattern": "^[a-zA-Z0-9]$"
+      "pattern": "^[a-zA-Z0-9]{0,8}$"
     },
     "fiber": {
       "type": "object",
