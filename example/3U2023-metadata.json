@@ -1,4 +1,6 @@
 {
+  "schema": "https://www.fdsn.org/schemas/DAS-Metadata-FDSN/2.0",
+  "version": "2.0",
   "cables": [
     {
       "cable_bounding_box": [
@@ -9359,7 +9361,7 @@
                 }
               ],
               "comment": "",
-              "coordinate_generation_date": "2024-10-10T09:10:56.168362",
+              "coordinate_generation_date": "2024-10-10T09:10:56.168362Z",
               "coordinate_system": "geographic",
               "depth_below_surface_unit": "",
               "dip_unit": "",
