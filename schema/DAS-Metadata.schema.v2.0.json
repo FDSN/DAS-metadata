@@ -4,6 +4,20 @@
   "title": "DAS Metadata",
   "description": "Distributed Acoustic Sensing (DAS) Metadata",
   "type": "object",
+  "required": [
+    "version",
+    "network_code",
+    "location",
+    "country",
+    "principal_investigator_name",
+    "principal_investigator_email",
+    "principal_investigator_address",
+    "point_of_contact",
+    "point_of_contact_email",
+    "point_of_contact_address",
+    "start_date",
+    "end_date"
+  ],
   "properties": {
     "version": {
       "description": "Version of the metadata schema that this document conforms to.",
@@ -99,20 +113,6 @@
       "uniqueItems": true
     }
   },
-  "required": [
-    "version",
-    "network_code",
-    "location",
-    "country",
-    "principal_investigator_name",
-    "principal_investigator_email",
-    "principal_investigator_address",
-    "point_of_contact",
-    "point_of_contact_email",
-    "point_of_contact_address",
-    "start_date",
-    "end_date"
-  ],
   "$defs": {
     "mandatorydatetime": {
       "type": "string",
@@ -147,13 +147,15 @@
     },
     "dasid": {
       "type": "string",
+      "minLength": 1,
       "maxLength": 8,
-      "pattern": "^[a-zA-Z0-9]{0,8}$"
+      "pattern": "^[a-zA-Z0-9]+$"
     },
     "fdsncode": {
       "type": "string",
+      "minLength": 1,
       "maxLength": 8,
-      "pattern": "^[A-Z0-9]{0,8}$"
+      "pattern": "^[A-Z0-9]+$"
     },
     "fiber": {
       "type": "object",
