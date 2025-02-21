@@ -312,7 +312,6 @@
       "type": "object",
       "required": [
         "channel_id",
-        "channel_group_id",
         "distance_along_fiber",
         "x_coordinate",
         "y_coordinate"
@@ -320,10 +319,6 @@
       "properties": {
         "channel_id": {
           "description": "Unique identifier of the individual channel, with the maximum of eight alphanumeric characters with no special characters (e.g., underscores, period, and dash).",
-          "$ref": "#/$defs/dasid"
-        },
-        "channel_group_id": {
-          "description": "Unique identifier of the channel group where the channel belongs.",
           "$ref": "#/$defs/dasid"
         },
         "distance_along_fiber": {
