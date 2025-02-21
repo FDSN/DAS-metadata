@@ -355,7 +355,6 @@
       "type": "object",
       "required": [
         "channel_group_id",
-        "acquisition_id",
         "cable_id",
         "fiber_id",
         "coordinate_generation_date",
@@ -368,10 +367,6 @@
       "properties": {
         "channel_group_id": {
           "description": "Unique identifier of the channel group. Identifier should have the maximum of eight alphanumeric characters with no special characters (e.g., underscores, period, and dash).",
-          "$ref": "#/$defs/dasid"
-        },
-        "acquisition_id": {
-          "description": "Unique identifier of data acquisition metadata block used to set this channel group. The acquisition_id must nest within specified interrogator_id.",
           "$ref": "#/$defs/dasid"
         },
         "cable_id": {
