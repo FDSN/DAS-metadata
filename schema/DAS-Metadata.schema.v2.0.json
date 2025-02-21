@@ -159,7 +159,6 @@
       "type": "object",
       "required": [
         "fiber_id",
-        "cable_id",
         "fiber_geometry",
         "fiber_mode",
         "fiber_refraction_index"
@@ -167,10 +166,6 @@
       "properties": {
         "fiber_id": {
           "description": "Unique identifier for the physical fiber, with the maximum of eight alphanumeric characters with no special characters (e.g., underscores, period, and dash).",
-          "$ref": "#/$defs/dasid"
-        },
-        "cable_id": {
-          "description": "Unique identifier associates this fiber to a specific cable.",
           "$ref": "#/$defs/dasid"
         },
         "fiber_geometry": {
