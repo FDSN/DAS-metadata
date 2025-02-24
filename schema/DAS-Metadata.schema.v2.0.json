@@ -66,11 +66,13 @@
     },
     "start_date": {
       "description": "Start date of data collection at the installation in Coordinated Universal Time (UTC).",
-      "$ref": "#/$defs/mandatorydatetime"
+      "type": "string",
+      "format": "date"
     },
     "end_date": {
       "description": "End date of data collection at the installation in UTC. If installation is still in operation, use a future date (e.g., 2999-01-01).",
-      "$ref": "#/$defs/mandatorydatetime"
+      "type": "string",
+      "format": "date"
     },
     "funding_agency": {
       "description": "Name(s) of agency that funded the experiment.",
