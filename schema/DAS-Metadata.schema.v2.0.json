@@ -118,7 +118,7 @@
   "$defs": {
     "mandatorydatetime": {
       "type": "string",
-      "oneOf": [
+      "anyOf": [
         {
           "format": "date-time"
         },
