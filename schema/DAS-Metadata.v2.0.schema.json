@@ -116,92 +116,6 @@
     }
   },
   "$defs": {
-    "dasid": {
-      "type": "string",
-      "minLength": 1,
-      "maxLength": 8,
-      "pattern": "^[a-zA-Z0-9]+$"
-    },
-    "fdsncode": {
-      "type": "string",
-      "minLength": 1,
-      "maxLength": 8,
-      "pattern": "^[A-Z0-9]+$"
-    },
-    "fiber": {
-      "type": "object",
-      "required": [
-        "fiber_id",
-        "fiber_geometry",
-        "fiber_mode",
-        "fiber_refraction_index"
-      ],
-      "properties": {
-        "fiber_id": {
-          "description": "Unique identifier for the physical fiber, with the maximum of eight alphanumeric characters with no special characters (e.g., underscores, period, and dash).",
-          "$ref": "#/$defs/dasid"
-        },
-        "fiber_geometry": {
-          "description": "Geometry of fiber [linear | helical | other].",
-          "type": "string"
-        },
-        "fiber_mode": {
-          "description": "Mode of fiber [single-mode | multi-mode | other].",
-          "type": "string"
-        },
-        "fiber_refraction_index": {
-          "description": "Refractive index of the fiber (unitless). Typical value for single-mode fiber is 1.4681.",
-          "type": "number",
-          "minimum": 0
-        },
-        "fiber_winding_angle": {
-          "description": "If helical, this is the winding angle relative to the center of the cable.",
-          "type": "number"
-        },
-        "fiber_winding_angle_unit": {
-          "description": "Unit of fiber winding angle.",
-          "type": "string"
-        },
-        "fiber_start_location": {
-          "description": "The start distance along the fiber with respect to the interrogator, referred to as StartLocus in PRODML.",
-          "type": "number"
-        },
-        "fiber_start_location_unit": {
-          "description": "Unit of fiber start location.",
-          "type": "string"
-        },
-        "fiber_end_location": {
-          "description": "The end location or distance along the fiber with respect to the interrogator.",
-          "type": "number"
-        },
-        "fiber_end_location_unit": {
-          "description": "Unit of fiber end location.",
-          "type": "string"
-        },
-        "fiber_optic_length": {
-          "description": "Total length of this fiber. Typically, it is the sum of fiber_start_location and fiber_end_location.",
-          "type": "number",
-          "exclusiveMinimum": 0
-        },
-        "fiber_optic_length_unit": {
-          "description": "Unit of fiber-optical length.",
-          "type": "string"
-        },
-        "fiber_one_way_attenuation": {
-          "description": "Power loss for one-way travel of a beam of light. Typical value for single mode fiber is 0.4.",
-          "type": "number",
-          "exclusiveMinimum": 0
-        },
-        "fiber_one_way_attenuation_unit": {
-          "description": "Unit of fiber one way attenuation [decibels/meter | decibels/kilometer].",
-          "type": "string"
-        },
-        "comment": {
-          "description": "Additional comments.",
-          "type": "string"
-        }
-      }
-    },
     "cable": {
       "type": "object",
       "required": [
@@ -275,6 +189,80 @@
           },
           "minItems": 1,
           "uniqueItems": true
+        }
+      }
+    },
+    "fiber": {
+      "type": "object",
+      "required": [
+        "fiber_id",
+        "fiber_geometry",
+        "fiber_mode",
+        "fiber_refraction_index"
+      ],
+      "properties": {
+        "fiber_id": {
+          "description": "Unique identifier for the physical fiber, with the maximum of eight alphanumeric characters with no special characters (e.g., underscores, period, and dash).",
+          "$ref": "#/$defs/dasid"
+        },
+        "fiber_geometry": {
+          "description": "Geometry of fiber [linear | helical | other].",
+          "type": "string"
+        },
+        "fiber_mode": {
+          "description": "Mode of fiber [single-mode | multi-mode | other].",
+          "type": "string"
+        },
+        "fiber_refraction_index": {
+          "description": "Refractive index of the fiber (unitless). Typical value for single-mode fiber is 1.4681.",
+          "type": "number",
+          "minimum": 0
+        },
+        "fiber_winding_angle": {
+          "description": "If helical, this is the winding angle relative to the center of the cable.",
+          "type": "number"
+        },
+        "fiber_winding_angle_unit": {
+          "description": "Unit of fiber winding angle.",
+          "type": "string"
+        },
+        "fiber_start_location": {
+          "description": "The start distance along the fiber with respect to the interrogator, referred to as StartLocus in PRODML.",
+          "type": "number"
+        },
+        "fiber_start_location_unit": {
+          "description": "Unit of fiber start location.",
+          "type": "string"
+        },
+        "fiber_end_location": {
+          "description": "The end location or distance along the fiber with respect to the interrogator.",
+          "type": "number"
+        },
+        "fiber_end_location_unit": {
+          "description": "Unit of fiber end location.",
+          "type": "string"
+        },
+        "fiber_optic_length": {
+          "description": "Total length of this fiber. Typically, it is the sum of fiber_start_location and fiber_end_location.",
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "fiber_optic_length_unit": {
+          "description": "Unit of fiber-optical length.",
+          "type": "string"
+        },
+        "fiber_one_way_attenuation": {
+          "description": "Power loss for one-way travel of a beam of light. Typical value for single mode fiber is 0.4.",
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "fiber_one_way_attenuation_unit": {
+          "description": "Unit of fiber one way attenuation [decibels/meter | decibels/kilometer].",
+          "type": "string"
+        },
+        "comment": {
+          "description": "Additional comments.",
+          "type": "string"
         }
       }
     },
@@ -610,6 +598,18 @@
           }
         }
       }
+    },
+    "dasid": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 8,
+      "pattern": "^[a-zA-Z0-9]+$"
+    },
+    "fdsncode": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 8,
+      "pattern": "^[A-Z0-9]+$"
     }
   }
 }
