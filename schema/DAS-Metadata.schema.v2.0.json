@@ -116,37 +116,6 @@
     }
   },
   "$defs": {
-    "mandatorydatetime": {
-      "type": "string",
-      "anyOf": [
-        {
-          "format": "date-time"
-        },
-        {
-          "format": "date"
-        }
-      ]
-    },
-    "optionaldatetime": {
-      "oneOf": [
-        {
-          "type": "null"
-        },
-        {
-          "$ref": "#/$defs/mandatorydatetime"
-        }
-      ]
-    },
-    "optionalnumber": {
-      "oneOf": [
-        {
-          "type": "null"
-        },
-        {
-          "type": "number"
-        }
-      ]
-    },
     "dasid": {
       "type": "string",
       "minLength": 1,
@@ -187,7 +156,7 @@
         },
         "fiber_winding_angle": {
           "description": "If helical, this is the winding angle relative to the center of the cable.",
-          "$ref": "#/$defs/optionalnumber"
+          "type": "number"
         },
         "fiber_winding_angle_unit": {
           "description": "Unit of fiber winding angle.",
@@ -195,7 +164,7 @@
         },
         "fiber_start_location": {
           "description": "The start distance along the fiber with respect to the interrogator, referred to as StartLocus in PRODML.",
-          "$ref": "#/$defs/optionalnumber"
+          "type": "number"
         },
         "fiber_start_location_unit": {
           "description": "Unit of fiber start location.",
@@ -203,7 +172,7 @@
         },
         "fiber_end_location": {
           "description": "The end location or distance along the fiber with respect to the interrogator.",
-          "$ref": "#/$defs/optionalnumber"
+          "type": "number"
         },
         "fiber_end_location_unit": {
           "description": "Unit of fiber end location.",
@@ -211,7 +180,7 @@
         },
         "fiber_optic_length": {
           "description": "Total length of this fiber. Typically, it is the sum of fiber_start_location and fiber_end_location.",
-          "$ref": "#/$defs/optionalnumber",
+          "type": "number",
           "exclusiveMinimum": 0
         },
         "fiber_optic_length_unit": {
@@ -220,7 +189,7 @@
         },
         "fiber_one_way_attenuation": {
           "description": "Power loss for one-way travel of a beam of light. Typical value for single mode fiber is 0.4.",
-          "$ref": "#/$defs/optionalnumber",
+          "type": "number",
           "exclusiveMinimum": 0
         },
         "fiber_one_way_attenuation_unit": {
@@ -260,11 +229,13 @@
         },
         "cable_installation_date": {
           "description": "Cable installation date in Coordinated Universal Time (UTC). This may not be known, an optional field.",
-          "$ref": "#/$defs/optionaldatetime"
+          "type": "string",
+          "format": "date"
         },
         "cable_removal_date": {
           "description": "Cable removal date in UTC. This may not be known, an optional field.",
-          "$ref": "#/$defs/optionaldatetime"
+          "type": "string",
+          "format": "date"
         },
         "cable_characteristics": {
           "description": "Describes how the fiber is encased in the cable [buffered | armored | gel-filled | other].",
@@ -284,7 +255,7 @@
         },
         "cable_outside_diameter": {
           "description": "Cable outside diameter.",
-          "$ref": "#/$defs/optionalnumber",
+          "type": "number",
           "exclusiveMinimum": 0
         },
         "cable_outside_diameter_unit": {
@@ -334,19 +305,19 @@
         },
         "elevation_above_sea_level": {
           "description": "Elevation or height above sea level.",
-          "$ref": "#/$defs/optionalnumber"
+          "type": "number"
         },
         "depth_below_surface": {
           "description": "Depth below surface (downward positive).",
-          "$ref": "#/$defs/optionalnumber"
+          "type": "number"
         },
         "strike": {
           "description": "Strike of individual channel.",
-          "$ref": "#/$defs/optionalnumber"
+          "type": "number"
         },
         "dip": {
           "description": "Dip of individual channel.",
-          "$ref": "#/$defs/optionalnumber"
+          "type": "number"
         }
       }
     },
@@ -378,7 +349,8 @@
         },
         "coordinate_generation_date": {
           "description": "Date that the channel coordinates were generated.",
-          "$ref": "#/$defs/optionaldatetime"
+          "type": "string",
+          "format": "date"
         },
         "coordinate_system": {
           "description": "Coordinate system used in channel location. Select geographic for coordinates in latitude and longitude. Universal Transverse Mercator (UTM) is the preferred projected coordinate system.",
@@ -406,7 +378,7 @@
         },
         "uncertainty_in_x_coordinate": {
           "description": "Uncertainty in the x-coordinate (UTM-x or longitude) representing the average uncertainty for all the channels.",
-          "$ref": "#/$defs/optionalnumber",
+          "type": "number",
           "minimum": 0
         },
         "uncertainty_in_x_coordinate_unit": {
@@ -419,7 +391,7 @@
         },
         "uncertainty_in_y_coordinate": {
           "description": "Uncertainty in the y-coordinate (UTM-y or latitude) representing the average uncertainty for all the channels.",
-          "$ref": "#/$defs/optionalnumber",
+          "type": "number",
           "minimum": 0
         },
         "uncertainty_in_y_coordinate_unit": {
@@ -432,7 +404,7 @@
         },
         "uncertainty_in_elevation": {
           "description": "Uncertainty in elevation above sea level, representing the average uncertainty in elevation for all the coordinates.",
-          "$ref": "#/$defs/optionalnumber",
+          "type": "number",
           "minimum": 0
         },
         "uncertainty_in_elevation_unit": {
@@ -445,7 +417,7 @@
         },
         "uncertainty_in_depth": {
           "description": "Uncertainty in depth below surface, representing the average uncertainty in depth for all the coordinates.",
-          "$ref": "#/$defs/optionalnumber",
+          "type": "number",
           "minimum": 0
         },
         "uncertainty_in_depth_unit": {
@@ -458,7 +430,7 @@
         },
         "uncertainty_in_strike": {
           "description": "Uncertainty in the strike.",
-          "$ref": "#/$defs/optionalnumber",
+          "type": "number",
           "minimum": 0
         },
         "uncertainty_in_strike_unit": {
@@ -471,7 +443,7 @@
         },
         "uncertainty_in_dip": {
           "description": "Uncertainty in the dip.",
-          "$ref": "#/$defs/optionalnumber",
+          "type": "number",
           "minimum": 0
         },
         "uncertainty_in_dip_unit": {
@@ -520,11 +492,13 @@
         },
         "acquisition_start_time": {
           "description": "Start time of this data acquisition in Coordinated Universal Time (UTC).",
-          "$ref": "#/$defs/mandatorydatetime"
+          "type": "string",
+          "format": "date-time"
         },
         "acquisition_end_time": {
           "description": "End time of this data acquisition in UTC. If data acquisition is still in operation, use a date the future (e.g., 2999-01-01 00:00:00.000Z).",
-          "$ref": "#/$defs/mandatorydatetime"
+          "type": "string",
+          "format": "date-time"
         },
         "acquisition_sample_rate": {
           "description": "The rate at which the interrogator provides output data.",
@@ -569,7 +543,7 @@
         },
         "pulse_rate": {
           "description": "Rate at which the interrogator unit interrogates the fiber sensor.",
-          "$ref": "#/$defs/optionalnumber",
+          "type": "number",
           "minimum": 0
         },
         "pulse_rate_unit": {
@@ -578,7 +552,7 @@
         },
         "pulse_width": {
           "description": "Width of the pulse sent down the fiber in unit of time.",
-          "$ref": "#/$defs/optionalnumber",
+          "type": "number",
           "minimum": 0
         },
         "pulse_width_unit": {
