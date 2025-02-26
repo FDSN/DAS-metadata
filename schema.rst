@@ -9,7 +9,7 @@ Terms and Definitions
 ------------------------
 The metadata fully describes the five key components of a DAS data collection
 system: (1) interrogator, (2) data acquisition, (3) channels, (4) cable, and (5)
-fiber. The metadata schema is hierarchical based, with a parent ‘overview’
+fiber. The metadata schema is hierarchical based, with a parent `overview`
 metadata block describing the experiment, and two main child branches describing
 the instrument (i.e., interrogator, photonics setup, acquisition parameters) and
 the sensor locations (i.e., cable installation and fiber properties). The
