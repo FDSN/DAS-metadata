@@ -1,6 +1,6 @@
 .. _examples:
 
-Examples
+Metadata Examples
 =================
 
 Below are example DAS Metadata files that demonstrate the use of the schema to
