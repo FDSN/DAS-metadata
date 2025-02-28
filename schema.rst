@@ -36,3 +36,6 @@ acquisition, channel group (and individual channel), cable, and fiber.
 
 .. image:: figures/fig_metadata_schema_simple.png
     :alt: Conceptual model of the metadata schema
+
+
+.. include:: schema/schema_tables.rst

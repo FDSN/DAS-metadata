@@ -6,7 +6,7 @@ Metadata Examples
 Below are example DAS Metadata files that demonstrate the use of the schema to
 describe different DAS deployments.
 
-Data set for 3U2023, Global DAS month teleseismic events
+Network 3U2023: Global DAS month teleseismic events
 ---------------------------------------------------------
 
 :download:`Download JSON <example/3U2023-metadata.json>`

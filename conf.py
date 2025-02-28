@@ -14,7 +14,7 @@ import os
 import subprocess
 import sphinx_rtd_theme
 import json
-import jsonschema_markdown
+import jsonschema_restructuredtext
 
 def get_context():
     """Return the current RTD version or git branch name"""
@@ -58,8 +58,7 @@ templates_path = ['_templates']
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['docs', 'Thumbs.db', '.DS_Store']
-
+exclude_patterns = ['schema/*.rst', 'Thumbs.db', '.DS_Store']
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -75,6 +74,7 @@ rst_prolog = """
 html_theme = 'sphinx_rtd_theme'
 html_theme_options = {
     'sticky_navigation': False,
+    "navigation_depth": 2,  # Sidebar opens level limit
 }
 
 html_logo='_static/FDSN-logo.png'
@@ -98,15 +98,15 @@ html_js_files = [
 ]
 
 # -- Generate JSON schema documentation -------------------------------
-import jsonschema_markdown
+import jsonschema_restructuredtext
 
 with open('schema/DAS-Metadata.v2.0.schema.json') as f:
     schema_json = json.load(f)
 
-schema_markdown = jsonschema_markdown.generate(schema_json)
+schema_rst = jsonschema_restructuredtext.generate(schema_json)
 
-with open('schema.md', 'w') as f:
-    f.write(schema_markdown)
+with open('schema/schema_tables.rst', 'w') as f:
+    f.write(schema_rst)
 
 # Enable sphinxmark for draft documentation
 if get_context() == "draft":
