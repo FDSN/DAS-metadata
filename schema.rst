@@ -1,6 +1,6 @@
 .. _schema: Schema definition
 
-Schema definition
+Schema
 =======================
 
 .. _terms-and-definitions:
@@ -37,5 +37,5 @@ acquisition, channel group (and individual channel), cable, and fiber.
 .. image:: figures/fig_metadata_schema_simple.png
     :alt: Conceptual model of the metadata schema
 
-
+.. The below file is generated from the schema during documentation build
 .. include:: schema/schema_tables.rst

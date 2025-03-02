@@ -74,7 +74,7 @@ rst_prolog = """
 html_theme = 'sphinx_rtd_theme'
 html_theme_options = {
     'sticky_navigation': False,
-    "navigation_depth": 2,  # Sidebar opens level limit
+    "navigation_depth": 3,  # Sidebar opens level limit
 }
 
 html_logo='_static/FDSN-logo.png'
@@ -103,7 +103,10 @@ import jsonschema_restructuredtext
 with open('schema/DAS-Metadata.v2.0.schema.json') as f:
     schema_json = json.load(f)
 
-schema_rst = jsonschema_restructuredtext.generate(schema_json)
+schema_rst = jsonschema_restructuredtext.generate(schema_json,
+                                                  replace_refs=True,
+                                                  suppress_undocumented=True,
+                                                  section_punctuation=["-", "^", "~", '+', '*', '+', '.'],)
 
 with open('schema/schema_tables.rst', 'w') as f:
     f.write(schema_rst)
