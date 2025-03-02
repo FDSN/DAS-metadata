@@ -15,8 +15,7 @@
     "point_of_contact",
     "point_of_contact_email",
     "point_of_contact_address",
-    "start_date",
-    "end_date"
+    "start_date"
   ],
   "properties": {
     "version": {
@@ -104,7 +103,7 @@
       ]
     },
     "end_date": {
-      "description": "End date of data collection at the installation in UTC. If installation is still in operation, use a future date (e.g., 2999-01-01).",
+      "description": "End date of data collection at the installation in UTC. If the installation end date is unknown this field should be omitted and updated when it is known.",
       "type": "string",
       "format": "date",
       "examples": [
