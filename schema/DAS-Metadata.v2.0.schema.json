@@ -9,9 +9,7 @@
     "network_code",
     "location",
     "country",
-    "principal_investigator_name",
-    "principal_investigator_email",
-    "principal_investigator_address",
+    "principal_investigator",
     "point_of_contact",
     "point_of_contact_email",
     "point_of_contact_address",
@@ -50,27 +48,14 @@
         "USA"
       ]
     },
-    "principal_investigator_name": {
-      "description": "Name of principal investigator for the installation.",
-      "type": "string",
-      "examples": [
-        "Professor Xavier"
-      ]
-    },
-    "principal_investigator_email": {
-      "description": "Email address of principal investigator.",
-      "type": "string",
-      "format": "email",
-      "examples": [
-        "professorx@xavier-institute.com"
-      ]
-    },
-    "principal_investigator_address": {
-      "description": "Physical address and institution of principal investigator.",
-      "type": "string",
-      "examples": [
-        "University of Wisconsin"
-      ]
+    "principal_investigator": {
+      "description": "Principal investigator(s) for the installation.",
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/principal_investigator_fields"
+      },
+      "minItems": 1,
+      "uniqueItems": true
     },
     "point_of_contact": {
       "description": "Point of contact for the metadata.",
@@ -166,6 +151,40 @@
     }
   },
   "$defs": {
+    "principal_investigator_fields": {
+      "title": "Principal investigator metadata",
+      "description": "The Principal Investigator metadata contains information about the principal investigator for the installation.",
+      "type": "object",
+      "required": [
+        "name",
+        "email",
+        "address"
+      ],
+      "properties": {
+        "name": {
+          "description": "Name of principal investigator for the installation.",
+          "type": "string",
+          "examples": [
+            "Professor Xavier"
+          ]
+        },
+        "email": {
+          "description": "Email address of principal investigator.",
+          "type": "string",
+          "format": "email",
+          "examples": [
+            "professorx@xavier-institute.com"
+          ]
+        },
+        "address": {
+          "description": "Physical address and institution of principal investigator.",
+          "type": "string",
+          "examples": [
+            "University of Wisconsin"
+          ]
+        }
+      }
+    },
     "interrogator": {
       "title": "Interrogator metadata",
       "description": "The Interrogator metadata contains information about the interrogator unit used for the data collection. More than one interrogator may be operating during an experiment, therefore each unit is given a unique identifier and described in individual Interrogator metadata blocks.",
