@@ -104,8 +104,6 @@ with open('schema/DAS-Metadata.v2.0.schema.json') as f:
     schema_json = json.load(f)
 
 schema_rst = jsonschema_restructuredtext.generate(schema_json,
-                                                  replace_refs=True,
-                                                  suppress_undocumented=True,
                                                   section_punctuation=["-", "^", "~", '+', '*', '+', '.'],)
 
 with open('schema/schema_tables.rst', 'w') as f:

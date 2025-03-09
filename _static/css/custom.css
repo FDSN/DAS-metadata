@@ -1,3 +1,7 @@
 .strike {
   text-decoration: line-through;
 }
+
+hr {
+  margin: 5px 0; /* Reduces vertical space */
+}

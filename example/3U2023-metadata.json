@@ -6583,9 +6583,33 @@
   "point_of_contact": "Christopher Wollin",
   "point_of_contact_address": "Deutsches GFZ Potsdam, Telegrafenberg, 14473 Potsdam, Germany",
   "point_of_contact_email": "wollin@gfz-potsdam.de",
-  "principal_investigator_address": "Deutsches GFZ Potsdam, Telegrafenberg, 14473 Potsdam, Germany",
-  "principal_investigator_email": "wollin@gfz-potsdam.de",
-  "principal_investigator_name": "Wollin, Christopher; Ehsaninezhad, Leila; Hart, Johannes; Rodr\u00edguez Tribaldos, Ver\u00f3nica; Krawczyk, Charlotte M.",
+  "principal_investigator": [
+    {
+      "address": "Deutsches GFZ Potsdam, Telegrafenberg, 14473 Potsdam, Germany",
+      "email": "wollin@gfz-potsdam.de",
+      "name": "Wollin, Christopher"
+    },
+    {
+      "address": "Deutsches GFZ Potsdam, Telegrafenberg, 14473 Potsdam, Germany",
+      "email": "",
+      "name": "Ehsaninezhad, Leila"
+    },
+    {
+      "address": "Deutsches GFZ Potsdam, Telegrafenberg, 14473 Potsdam, Germany",
+      "email": "",
+      "name": "Hart, Johannes"
+    },
+    {
+      "address": "Deutsches GFZ Potsdam, Telegrafenberg, 14473 Potsdam, Germany",
+      "email": "",
+      "name": "Rodríguez Tribaldos, Verónica"
+    },
+    {
+      "address": "Deutsches GFZ Potsdam, Telegrafenberg, 14473 Potsdam, Germany",
+      "email": "",
+      "name": "Krawczyk, Charlotte M."
+    }
+  ],
   "purpose_of_data_collection": "Global DAS month teleseismic events",
   "start_date": "2023-02-01"
 }
