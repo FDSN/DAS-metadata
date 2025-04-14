@@ -54,5 +54,6 @@ Table of Contents
    example-scenarios
    examples
    changes
+   software
    license
    FDSN home <https://www.fdsn.org/>
