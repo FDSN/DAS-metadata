@@ -326,7 +326,9 @@
             "count",
             "m/m",
             "m/m/s",
-            "m/s"
+            "m/s",
+            "rad/s",
+            "rad/m/s"
           ],
           "examples": [
             "count"
