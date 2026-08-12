@@ -324,9 +324,9 @@
           "description": "Unit of measure of archived data set. This may be the same unit as the Interrogator unit measure if the data are raw.",
           "enum": [
             "count",
-            "strain",
-            "strain-rate",
-            "velocity"
+            "m/m",
+            "m/m/s",
+            "m/s"
           ],
           "examples": [
             "count"

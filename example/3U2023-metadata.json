@@ -4720,7 +4720,7 @@
           "number_of_channels": 10185,
           "spatial_sampling_interval": 2.0,
           "spatial_sampling_interval_unit": "meter",
-          "unit_of_measure": "strain-rate"
+          "unit_of_measure": "m/m/s"
         }
       ],
       "interrogator_id": "inter01",
