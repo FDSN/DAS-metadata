@@ -330,7 +330,15 @@
             "rad/m/s"
           ],
           "examples": [
-            "count"
+            "m/m"
+          ]
+        },
+        "scale_factor": {
+          "description": "Scaling factor to multiply in order to express data in physical units.",
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "examples": [
+            1234567.89
           ]
         },
         "number_of_channels": {
