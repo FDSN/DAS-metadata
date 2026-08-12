@@ -9,17 +9,19 @@ v.2.0 FDSN DRAFT (February 2025)
 **DRAFT** FDSN DAS Metadata Schema v2.0 is created based on the v1.1 DAS-RCN schema with the
 following changes:
 
--   Add a requried schema version number
+-   Add a required schema version number
 -   Add a FDSN schema identifier ($id)
 -   Limit the `network_code` field to characters allowed by the FDSN Source Identifier
     specification to ensure compatibility.
 -   Remove the `channel_group_id`, `interrogator_id`, `acquisition_id`, and `cable_id` fields from
     sub-structures.  They are not needed in this hierarchical structure where those values
     are unambiguous via context.
--   Remove the allowance for optional fields to be specified as `null`.  Whether a field is
+-   Remove the allowance for optional fields to be specified as `null`. Whether a field is
     optional or required is specified using the JSON Schema features and this simplifies the
-    logic for readers determining if an optional field is set.  This does not effect the
+    logic for readers determining if an optional field is set. This does not affect the
     information content of the schema, only the syntax.
+-   Transform the "channels" attribute from an array of "channel" to an object with arrays, to
+    make easier the reading of the coordinates and all channel attributes.
 
 v1.1.0 (September 21, 2023)
 ---------------------------

@@ -20,12 +20,12 @@ in a horizontal trench, the metadata structure is relatively straight forward,
 with a single parent Interrogator metadata and a single parent Cable metadata.
 Within the Cable metadata, the user will set `cable_environment` as "trench",
 which is part of the controlled vocabulary list, and can further describe in
-plain language under 'cable_installation_environment'. The `fiber_geometry`
-field under the Fiber metadata will åbe defined as "linear". If there are
+plain language under `cable_installation_environment`. The `fiber_geometry`
+field under the Fiber metadata will be defined as "linear". If there are
 multiple acquisitions at different times along the same cable (and fiber), the
 metadata schema allows additional Acquisition metadata blocks associated with
 independent Channel Group metadata mapped to the Cable and Fiber metadata by
-specifying the cable_id and fiber_id.
+specifying the `cable_id` and `fiber_id`.
 
 Case 2: Dark fiber cable
 ------------------------

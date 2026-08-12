@@ -634,71 +634,101 @@
         "channels": {
           "title": "Channels",
           "description": "One or more channels for this channel group.",
-          "type": "array",
+          "type": "object",
           "items": {
-            "$ref": "#/$defs/channel"
+            "$ref": "#/$defs/channelarray"
           }
         }
       }
     },
-    "channel": {
-      "title": "Channel metadata",
-      "description": "Nested under the Channel Group metadata, the individual Channel metadata consists of properties that are unique to each channel, including a unique identifier, coordinates, and for borehole cable, optional strike and dip. Note that the total amount of individual Channel metadata may be equal or less than the number_of_channels attribute specified under Acquisition metadata as only a subset of the channels may be included in the data. This is to accommodate cases where channels cannot be located or omitted due to various reasons.",
+    "channelarray": {
+      "title": "Channels metadata",
+      "description": "Nested under the Channel Group metadata, the metadata of the Channels is stored in arrays, including a unique identifier, coordinates, and for borehole cable, optional strike and dip. Note that the total amount of individual Channel metadata may be equal or less than the number_of_channels attribute specified under Acquisition metadata as only a subset of the channels may be included in the data. This is to accommodate cases where channels cannot be located or omitted due to various reasons.",
       "type": "object",
       "required": [
-        "channel_id",
-        "distance_along_fiber",
-        "x_coordinate",
-        "y_coordinate"
+        "channel_ids",
+        "distances_along_fiber",
+        "x_coordinates",
+        "y_coordinates"
       ],
       "properties": {
-        "channel_id": {
-          "description": "Unique identifier of the individual channel, with the maximum of eight alphanumeric characters with no special characters (e.g., underscores, period, and dash).",
-          "allOf": [
-            {
-              "$ref": "#/$defs/dasid"
-            }
-          ],
+        "channel_ids": {
+          "description": "Array of Unique IDentifiers of each individual channel, with the maximum of eight alphanumeric characters with no special characters (e.g., underscores, period, and dash).",
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/dasid"
+          },
+          "uniqueItems": true,
           "examples": [
-            "431"
+            ["A0001", "A0002", "B0001"]
           ]
         },
-        "distance_along_fiber": {
-          "description": "Distance along fiber between the interrogator and channel. Zero meter at the connector to the interrogator; and negative distances for fiber section inside the interrogator.",
-          "type": "number"
+        "distances_along_fiber": {
+          "description": "Array of distances along fiber between the interrogator and channel. Zero meter at the connector to the interrogator; and negative distances for fiber section inside the interrogator.",
+          "type": "array",
+          "items": {
+            "type": "number"
+          }
         },
-        "x_coordinate": {
-          "description": "x-coordinate (UTM-x or longitude) of the channel.",
-          "type": "number",
+        "x_coordinates": {
+          "description": "Array of X-coordinates (UTM-x or longitude) of the channels.",
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
           "examples": [
-            328050.69
+            [100.1, 100.3, 100.5]
           ]
         },
-        "y_coordinate": {
-          "description": "y-coordinate (UTM-y or latitude) of the channel.",
-          "type": "number",
+        "y_coordinates": {
+          "description": "Array of y-coordinates (UTM-y or latitude) of the channels.",
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
           "examples": [
-            4407542.05
+            [32.1, 33.3, 33.5]
           ]
         },
-        "elevation_above_sea_level": {
-          "description": "Elevation or height above sea level.",
-          "type": "number",
+        "elevations_above_sea_level": {
+          "description": "Array of elevations or height above sea level.",
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
           "examples": [
-            1231.546
+            [12345.6, 12346.7, 12347.8]
           ]
         },
-        "depth_below_surface": {
-          "description": "Depth below surface (downward positive).",
-          "type": "number"
+        "depths_below_surface": {
+          "description": "Array of depths below surface (downward positive).",
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "examples": [
+            [1.1, 1.0, 0]
+          ]
         },
-        "strike": {
-          "description": "Strike of individual channel.",
-          "type": "number"
+        "strikes": {
+          "description": "Array of strikes of individual channels.",
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "examples": [
+            [0, 1, 2]
+          ]
         },
         "dip": {
-          "description": "Dip of individual channel.",
-          "type": "number"
+          "description": "Array of dips of individual channels.",
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "examples": [
+            [0, 1, 2]
+          ]
         }
       }
     },
