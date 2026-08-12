@@ -1,6 +1,6 @@
 {
   "schema": "https://www.fdsn.org/schemas/DAS-Metadata-FDSN/2.0",
-  "version": "2.0",
+  "schema_version": "2.0",
   "cables": [
     {
       "cable_bounding_box": [

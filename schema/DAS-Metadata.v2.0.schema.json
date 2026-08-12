@@ -16,7 +16,7 @@
     "start_date"
   ],
   "properties": {
-    "version": {
+    "schema_version": {
       "description": "Metadata schema version.  This identifies which version of the metadata schema that this document conforms to.",
       "enum": [
         "2.0"
