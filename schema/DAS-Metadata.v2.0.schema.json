@@ -16,7 +16,7 @@
   ],
   "properties": {
     "schema_version": {
-      "description": "Metadata schema version.  This identifies which version of the metadata schema that this document conforms to.",
+      "description": "Metadata schema version. This identifies which version of the metadata schema that this document conforms to.",
       "enum": [
         "2.0"
       ]
@@ -130,7 +130,7 @@
     },
     "interrogators": {
       "title": "Interrogators",
-      "description": "Interrogators.  Multiple interrogators can be documented.",
+      "description": "Interrogators. Multiple interrogators can be documented.",
       "type": "array",
       "items": {
         "$ref": "#/$defs/interrogator"
@@ -140,7 +140,7 @@
     },
     "cables": {
       "title": "Cables",
-      "description": "Cables.  Multiple cables can be documented.",
+      "description": "Cables. Multiple cables can be documented.",
       "type": "array",
       "items": {
         "$ref": "#/$defs/cable"
@@ -270,7 +270,7 @@
             }
           ],
           "examples": [
-            "A001"
+            "ACQ1"
           ]
         },
         "acquisition_start_time": {
@@ -298,10 +298,10 @@
           ]
         },
         "acquisition_sample_rate_unit": {
-          "description": "Unit of acquisition sample rate.",
+          "description": "Unit of acquisition sample rate. SI units should be used.",
           "type": "string",
           "examples": [
-            "Hertz"
+            "Hz"
           ]
         },
         "gauge_length": {
@@ -313,14 +313,14 @@
           ]
         },
         "gauge_length_unit": {
-          "description": "Unit of gauge length.",
+          "description": "Unit of gauge length. SI units should be used.",
           "type": "string",
           "examples": [
-            "meter"
+            "m"
           ]
         },
         "unit_of_measure": {
-          "description": "Unit of measure of archived data set. This may be the same unit as the Interrogator unit measure if the data are raw.",
+          "description": "Unit of measure of archived data set. This may be the same unit as the Interrogator unit measure if the data are raw. SI units should be used.",
           "enum": [
             "count",
             "m/m",
@@ -358,10 +358,10 @@
           ]
         },
         "spatial_sampling_interval_unit": {
-          "description": "Unit of spatial sampling interval.",
+          "description": "Unit of spatial sampling interval. SI units should be used.",
           "type": "string",
           "examples": [
-            "meter"
+            "m"
           ]
         },
         "pulse_rate": {
@@ -373,10 +373,10 @@
           ]
         },
         "pulse_rate_unit": {
-          "description": "Unit of pulse rate.",
+          "description": "Unit of pulse rate. SI units should be used.",
           "type": "string",
           "examples": [
-            "Hertz"
+            "Hz"
           ]
         },
         "pulse_width": {
@@ -385,10 +385,10 @@
           "minimum": 0
         },
         "pulse_width_unit": {
-          "description": "Unit of pulse width.",
+          "description": "Unit of pulse width. SI units should be used.",
           "type": "string",
           "examples": [
-            "nanoseconds"
+            "ns"
           ]
         },
         "comment": {
@@ -502,10 +502,10 @@
           ]
         },
         "distance_along_fiber_unit": {
-          "description": "Unit of distance along fiber.",
+          "description": "Unit of distance along fiber. SI units should be used.",
           "type": "string",
           "examples": [
-            "meter"
+            "m"
           ]
         },
         "x_coordinate_unit": {
@@ -521,10 +521,10 @@
           "minimum": 0
         },
         "uncertainty_in_x_coordinate_unit": {
-          "description": "Unit of uncertainty in x-coordinate.",
+          "description": "Unit of uncertainty in x-coordinate. SI units should be used.",
           "type": "string",
           "examples": [
-            "meter"
+            "m"
           ]
         },
         "y_coordinate_unit": {
@@ -540,17 +540,17 @@
           "minimum": 0
         },
         "uncertainty_in_y_coordinate_unit": {
-          "description": "Unit of uncertainty in y-coordinate.",
+          "description": "Unit of uncertainty in y-coordinate. SI units should be used.",
           "type": "string",
           "examples": [
-            "meter"
+            "m"
           ]
         },
         "elevation_above_sea_level_unit": {
-          "description": "Unit of elevation above sea level. Applies to every individual channel nested under the channel group.",
+          "description": "Unit of elevation above sea level. Applies to every individual channel nested under the channel group. SI units should be used.",
           "type": "string",
           "examples": [
-            "meter"
+            "m"
           ]
         },
         "uncertainty_in_elevation": {
@@ -559,17 +559,17 @@
           "minimum": 0
         },
         "uncertainty_in_elevation_unit": {
-          "description": "Unit of uncertainty in elevation.",
+          "description": "Unit of uncertainty in elevation. SI units should be used.",
           "type": "string",
           "examples": [
-            "meter"
+            "m"
           ]
         },
         "depth_below_surface_unit": {
-          "description": "Unit of depth below surface. Applies to every individual channel nested under the channel group.",
+          "description": "Unit of depth below surface. Applies to every individual channel nested under the channel group. SI units should be used.",
           "type": "string",
           "examples": [
-            "meter"
+            "m"
           ]
         },
         "uncertainty_in_depth": {
@@ -578,10 +578,10 @@
           "minimum": 0
         },
         "uncertainty_in_depth_unit": {
-          "description": "Unit of uncertainty in depth.",
+          "description": "Unit of uncertainty in depth. SI units should be used.",
           "type": "string",
           "examples": [
-            "meter"
+            "m"
           ]
         },
         "strike_unit": {
@@ -626,14 +626,14 @@
           "description": "The first channel considered physically meaningful. Typically, this will be a few channels after the last channel inside the interrogator. Must match one of the channel IDs.",
           "type": "string",
           "examples": [
-            "30"
+            "A0030"
           ]
         },
         "last_usable_channel_id": {
           "description": "The last channel considered physically meaningful. Typically, an acquisition will add virtual channels at the end of the fiber or the optical path might not reach the end of the fiber, and this can be used to cut the data set into a working set. Must match one of the channel IDs.",
           "type": "string",
           "examples": [
-            "8650"
+            "A8650"
           ]
         },
         "comment": {
@@ -642,7 +642,7 @@
         },
         "channels": {
           "title": "Channels",
-          "description": "One or more channels for this channel group.",
+          "description": "Channels for this channel group.",
           "type": "object",
           "items": {
             "$ref": "#/$defs/channelarray"
@@ -662,7 +662,7 @@
       ],
       "properties": {
         "channel_ids": {
-          "description": "Array of Unique IDentifiers of each individual channel, with the maximum of eight alphanumeric characters with no special characters (e.g., underscores, period, and dash).",
+          "description": "Array of Unique IDs of each individual channel, with the maximum of eight alphanumeric characters with no special characters (e.g., underscores, period, and dash).",
           "type": "array",
           "items": {
             "$ref": "#/$defs/dasid"
@@ -824,10 +824,10 @@
           "exclusiveMinimum": 0
         },
         "cable_outside_diameter_unit": {
-          "description": "Unit of outside diameter of cable.",
+          "description": "Unit of outside diameter of cable. SI units should be used.",
           "type": "string",
           "examples": [
-            "millimeter"
+            "mm"
           ]
         },
         "comment": {
@@ -905,10 +905,10 @@
           "type": "number"
         },
         "fiber_start_location_unit": {
-          "description": "Unit of fiber start location.",
+          "description": "Unit of fiber start location. SI units should be used.",
           "type": "string",
           "examples": [
-            "meter"
+            "m"
           ]
         },
         "fiber_end_location": {
@@ -916,10 +916,10 @@
           "type": "number"
         },
         "fiber_end_location_unit": {
-          "description": "Unit of fiber end location.",
+          "description": "Unit of fiber end location. SI units should be used.",
           "type": "string",
           "examples": [
-            "meter"
+            "m"
           ]
         },
         "fiber_optic_length": {
@@ -931,10 +931,10 @@
           ]
         },
         "fiber_optic_length_unit": {
-          "description": "Unit of fiber-optical length.",
+          "description": "Unit of fiber-optical length. SI units should be used.",
           "type": "string",
           "examples": [
-            "meter"
+            "m"
           ]
         },
         "fiber_one_way_attenuation": {
@@ -943,10 +943,10 @@
           "exclusiveMinimum": 0
         },
         "fiber_one_way_attenuation_unit": {
-          "description": "Unit of fiber one way attenuation [decibels/meter | decibels/kilometer].",
+          "description": "Unit of fiber one way attenuation [dB/m | dB/km]. SI units should be used.",
           "type": "string",
           "examples": [
-            "decibels/meter"
+            "dB/m"
           ]
         },
         "comment": {
