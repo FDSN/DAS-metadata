@@ -22,6 +22,7 @@ following changes:
     information content of the schema, only the syntax.
 -   Transform the "channels" attribute from an array of "channel" to an object with arrays, to
     make easier the reading of the coordinates and all channel attributes.
+-   All units must be expressed as SI units if possible.
 
 v1.1.0 (September 21, 2023)
 ---------------------------
