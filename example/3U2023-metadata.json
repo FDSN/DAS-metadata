@@ -19,7 +19,7 @@
           "fiber_geometry": "",
           "fiber_mode": "single-mode",
           "fiber_optical_length": 18580.0,
-          "fiber_optical_length_unit": "meters",
+          "fiber_optical_length_unit": "m",
           "fiber_refraction_index": 1.4681
         }
       ]
@@ -37,7 +37,7 @@
           "acquisition_end_time": "2023-02-28T23:59:59Z",
           "acquisition_id": "acqui01",
           "acquisition_sample_rate": 500.0,
-          "acquisition_sample_rate_unit": "Hertz",
+          "acquisition_sample_rate_unit": "Hz",
           "acquisition_start_time": "2023-02-01T00:00:00Z",
           "channel_groups": [
             {
@@ -4707,19 +4707,19 @@
               },
               "coordinate_generation_date": "2024-10-10",
               "coordinate_system": "geographic",
-              "distance_along_fiber_unit": "meter",
+              "distance_along_fiber_unit": "m",
               "fiber_id": "fiber01",
               "reference_frame": "WGS84",
-              "x_coordinate_unit": "meter",
-              "y_coordinate_unit": "meter"
+              "x_coordinate_unit": "m",
+              "y_coordinate_unit": "m"
             }
           ],
           "comment": "Postprocessing: temporal anti-alias-FIR filter and decimation to 100Hz, spatial averaging over 3 channels and decimation to 20m channel spacing",
           "gauge_length": 10.0,
-          "gauge_length_unit": "meter",
+          "gauge_length_unit": "m",
           "number_of_channels": 10185,
           "spatial_sampling_interval": 2.0,
-          "spatial_sampling_interval_unit": "meter",
+          "spatial_sampling_interval_unit": "m",
           "unit_of_measure": "m/m/s"
         }
       ],
