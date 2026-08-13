@@ -282,7 +282,7 @@
           ]
         },
         "acquisition_end_time": {
-          "description": "End time of this data acquisition in UTC. If data acquisition is still in operation, use a date the future (e.g., 2999-01-01 00:00:00.000Z).",
+          "description": "End time of this data acquisition in UTC. If data acquisition is still in operation, this field should be omitted and updated when it is known.",
           "type": "string",
           "format": "date-time",
           "examples": [
