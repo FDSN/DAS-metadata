@@ -357,7 +357,7 @@
             1.000
           ]
         },
-        "spatial_sampling_interval_units": {
+        "spatial_sampling_interval_unit": {
           "description": "Unit of spatial sampling interval.",
           "type": "string",
           "examples": [
