@@ -5,7 +5,7 @@
   "description": "The Overview metadata gives a high-level overview of the DAS deployment and describes the geographic location of the installation, dates of the project, and information on the data provider.",
   "type": "object",
   "required": [
-    "version",
+    "schema_version",
     "network_code",
     "location",
     "principal_investigator",
