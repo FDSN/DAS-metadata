@@ -710,7 +710,7 @@
           ]
         },
         "depths_below_surface": {
-          "description": "Array of vertical distances from the local ground surface to the fibre at each channel, with positive values measured downward.",
+          "description": "Array of vertical distances from the local ground surface to the fibre at each channel, with the ground surface defined as zero and positive values measured downward.",
           "type": "array",
           "items": {
             "type": "number"
