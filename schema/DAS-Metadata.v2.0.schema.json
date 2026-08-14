@@ -720,7 +720,7 @@
           ]
         },
         "strikes": {
-          "description": "Array of strikes of individual channels.",
+          "description": "Array of local azimuths at each channel, measured clockwise from geographical north in the direction of increasing channel number.",
           "type": "array",
           "items": {
             "type": "number"
@@ -729,8 +729,8 @@
             [0, 1, 2]
           ]
         },
-        "dip": {
-          "description": "Array of dips of individual channels.",
+        "dips": {
+          "description": "Array of individual channel dips, measured from horizontal and positive downward: 0° is horizontal, −90° is vertically upward, and +90° is vertically downward.",
           "type": "array",
           "items": {
             "type": "number"
