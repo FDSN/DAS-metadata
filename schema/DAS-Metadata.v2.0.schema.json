@@ -700,7 +700,7 @@
           ]
         },
         "elevations_above_sea_level": {
-          "description": "Array of elevations or height above sea level.",
+          "description": "Array of local ground-surface elevations or heights above sea level at each channel.",
           "type": "array",
           "items": {
             "type": "number"
@@ -710,7 +710,7 @@
           ]
         },
         "depths_below_surface": {
-          "description": "Array of depths below surface (downward positive).",
+          "description": "Array of vertical distances from the local ground surface to the fibre at each channel, with the ground surface defined as zero and positive values measured downward.",
           "type": "array",
           "items": {
             "type": "number"
@@ -720,7 +720,7 @@
           ]
         },
         "strikes": {
-          "description": "Array of strikes of individual channels.",
+          "description": "Array of local azimuths at each channel, measured clockwise from geographical north in the direction of increasing channel number.",
           "type": "array",
           "items": {
             "type": "number"
@@ -729,8 +729,8 @@
             [0, 1, 2]
           ]
         },
-        "dip": {
-          "description": "Array of dips of individual channels.",
+        "dips": {
+          "description": "Array of individual channel dips, measured from horizontal and positive downward: 0° is horizontal, −90° is vertically upward, and +90° is vertically downward.",
           "type": "array",
           "items": {
             "type": "number"
