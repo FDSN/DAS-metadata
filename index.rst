@@ -7,6 +7,14 @@ The `International Federation of Digital Seismograph Networks
 <http://www.fdsn.org/>`_ (FDSN) defines **DAS Metadata** as a metadata
 format for describing Distributed Acoustic Sensing (DAS) data sets.
 
+All versions of this schema are maintained at:
+
+https://github.com/FDSN/DAS-metadata/tree/main/schema
+
+For instance, at the time of this writing, the latest schema version is v2.0 and is located at:
+
+https://raw.githubusercontent.com/FDSN/DAS-metadata/refs/heads/main/schema/DAS-Metadata.v2.0.schema.json
+
 The goals of this format are to provide an open standard for the description of
 DAS data sets to allow compare and integrate measurements across deployments, to
 make the data reusable by others following Findable, Accessible, Interoperable,
