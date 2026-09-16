@@ -251,7 +251,6 @@
       "required": [
         "acquisition_id",
         "acquisition_start_time",
-        "acquisition_end_time",
         "acquisition_sample_rate",
         "acquisition_sample_rate_unit",
         "gauge_length",
