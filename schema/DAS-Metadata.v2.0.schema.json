@@ -956,6 +956,8 @@
       }
     },
     "dasid": {
+      "title": "Identifier",
+      "description": "Identifier used to name or reference resources throughout this schema (e.g. Interrogator, Channel)",
       "type": "string",
       "minLength": 1,
       "maxLength": 8,
