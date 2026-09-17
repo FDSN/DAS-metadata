@@ -36,4 +36,4 @@ etc. and does not imply any functional change to the specification.
 
 ## License
 
-This specification is released under the CC BY 4.0 license.  See `LISCENSE` for more details.
+This specification is released under the CC BY 4.0 license.  See `LICENSE` for more details.

@@ -1,3 +1,6 @@
 _build/
 venv/
 env/
+
+# This is a build artifact
+schema.rst
