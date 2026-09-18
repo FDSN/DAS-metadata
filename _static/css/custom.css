@@ -5,3 +5,14 @@
 hr {
   margin: 5px 0; /* Reduces vertical space */
 }
+
+/* Trim table cell side padding (theme default is 8px 16px) to give
+   wide schema tables more room for content */
+.rst-content table.docutils td,
+.rst-content table.docutils th,
+.rst-content table.field-list td,
+.rst-content table.field-list th,
+.wy-table td,
+.wy-table th {
+  padding: 8px 8px;
+}
